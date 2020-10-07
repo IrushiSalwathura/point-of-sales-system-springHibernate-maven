@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lk.ijse.dep.db.HibernateUtil;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -21,11 +22,15 @@ public class AppInitializer extends Application {
      * There is nothing to do just run the class
      * @params args No need to add parameters
      */
-    public static void main(String[] args) {
+    private static AnnotationConfigApplicationContext ctx;
+    public static AnnotationConfigApplicationContext getApplicationContext(){return ctx;}
 
+    public static void main(String[] args) {
+        ctx = new AnnotationConfigApplicationContext();
+        ctx.register(AppConfig.class);
+        ctx.refresh();
         launch(args);
         HibernateUtil.getSessionFactory().close();
-
     }
 
     @Override

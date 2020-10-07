@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2E363A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.controller.MainFormController">
+   <children>
+      <Label layoutX="237.0" layoutY="38.0" text="POS SYSTEM" textFill="#c79059">
+         <font>
+            <Font name="Symbol" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgCustomer" fitHeight="91.0" fitWidth="82.0" layoutX="71.0" layoutY="180.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnterAnimation" onMouseExited="#mouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/customer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgItem" fitHeight="82.0" fitWidth="82.0" layoutX="196.0" layoutY="180.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnterAnimation" onMouseExited="#mouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/itemsList.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgOrder" fitHeight="82.0" fitWidth="82.0" layoutX="323.0" layoutY="180.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnterAnimation" onMouseExited="#mouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/placeOrder.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgViewOrders" fitHeight="82.0" fitWidth="82.0" layoutX="445.0" layoutY="180.0" onMouseClicked="#navigate" onMouseEntered="#mouseEnterAnimation" onMouseExited="#mouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/search.png" />
+         </image>
+      </ImageView>
+      <Line endX="378.66668701171875" layoutX="161.0" layoutY="131.0" startX="-100.0" stroke="#9a9292" />
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="12.0" layoutY="308.0" prefHeight="26.0" prefWidth="577.0" text="Welcome" textAlignment="CENTER" textFill="#ced0d7">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="17.0" layoutY="340.0" prefHeight="16.0" prefWidth="577.0" text=" In order to proceed, Please select one of above main operations" textFill="#9a9797">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="213.0" layoutY="80.0" text="POINT OF SALES SYSTEM - JDBC" textFill="#c0baa8">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

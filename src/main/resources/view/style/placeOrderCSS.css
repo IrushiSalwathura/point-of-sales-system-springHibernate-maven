@@ -1,0 +1,10 @@
+/**
+This is to style the combo boxes in PlaceOrderForm
+ */
+
+.jfx-combo-box .cell {
+    -fx-text-fill: #d1ced4;
+}
+.combo-box .list-cell {
+    -fx-background: #2E363A;
+}

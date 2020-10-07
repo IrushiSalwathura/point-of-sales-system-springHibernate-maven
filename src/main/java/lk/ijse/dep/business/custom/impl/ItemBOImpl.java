@@ -1,15 +1,13 @@
 package lk.ijse.dep.business.custom.impl;
 
 import lk.ijse.dep.business.custom.ItemBO;
-import lk.ijse.dep.dao.DAOFactory;
-import lk.ijse.dep.dao.DAOType;
 import lk.ijse.dep.dao.custom.ItemDAO;
 import lk.ijse.dep.db.HibernateUtil;
-import lk.ijse.dep.entity.Customer;
 import lk.ijse.dep.entity.Item;
 import lk.ijse.dep.util.ItemTM;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -17,7 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 @Component
 public class ItemBOImpl implements ItemBO {
-    private static ItemDAO itemDAO = DAOFactory.getInstance().getDAO(DAOType.ITEM);
+    @Autowired
+    private ItemDAO itemDAO;
 
     public String getNewItemCode() throws Exception {
         Session session = HibernateUtil.getSessionFactory().openSession();

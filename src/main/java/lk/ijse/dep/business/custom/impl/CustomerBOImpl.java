@@ -1,21 +1,22 @@
 package lk.ijse.dep.business.custom.impl;
 
 import lk.ijse.dep.business.custom.CustomerBO;
-import lk.ijse.dep.dao.DAOFactory;
-import lk.ijse.dep.dao.DAOType;
 import lk.ijse.dep.dao.custom.CustomerDAO;
 import lk.ijse.dep.db.HibernateUtil;
 import lk.ijse.dep.entity.Customer;
 import lk.ijse.dep.util.CustomerTM;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 @Component
 public class CustomerBOImpl implements CustomerBO {
-    private static CustomerDAO customerDAO = DAOFactory.getInstance().getDAO(DAOType.CUSTOMER);
+    @Autowired
+    private CustomerDAO customerDAO;
+
     public String getNewCustomerId() throws Exception {
         Session session = HibernateUtil.getSessionFactory().openSession();
         customerDAO.setSession(session);

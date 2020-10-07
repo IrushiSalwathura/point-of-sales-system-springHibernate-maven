@@ -3,11 +3,12 @@ package lk.ijse.dep.dao.custom.impl;
 import lk.ijse.dep.dao.custom.QueryDAO;
 import lk.ijse.dep.entity.CustomEntity;
 import org.hibernate.Session;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class QueryDAOImpl implements QueryDAO {
     private Session session;
 

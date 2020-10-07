@@ -9,10 +9,11 @@ import lk.ijse.dep.entity.Customer;
 import lk.ijse.dep.util.CustomerTM;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class CustomerBOImpl implements CustomerBO {
     private static CustomerDAO customerDAO = DAOFactory.getInstance().getDAO(DAOType.CUSTOMER);
     public String getNewCustomerId() throws Exception {

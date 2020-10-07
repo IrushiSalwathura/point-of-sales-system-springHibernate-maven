@@ -13,11 +13,12 @@ import lk.ijse.dep.util.OrderDetailTM;
 import lk.ijse.dep.util.OrderTM;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class OrderBOImpl implements OrderBO {
     private OrderDAO orderDAO = DAOFactory.getInstance().getDAO(DAOType.ORDER);
     private OrderDetailDAO orderDetailDAO = DAOFactory.getInstance().getDAO(DAOType.ORDERDETAIL);

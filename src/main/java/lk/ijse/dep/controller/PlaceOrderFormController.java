@@ -1,8 +1,6 @@
 package lk.ijse.dep.controller;
 
 import lk.ijse.dep.AppInitializer;
-import lk.ijse.dep.business.BOFactory;
-import lk.ijse.dep.business.BOType;
 import lk.ijse.dep.business.custom.CustomerBO;
 import lk.ijse.dep.business.custom.ItemBO;
 import lk.ijse.dep.business.custom.OrderBO;

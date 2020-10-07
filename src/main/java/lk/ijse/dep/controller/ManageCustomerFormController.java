@@ -13,8 +13,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.dep.AppInitializer;
-import lk.ijse.dep.business.BOFactory;
-import lk.ijse.dep.business.BOType;
 import lk.ijse.dep.business.custom.CustomerBO;
 import lk.ijse.dep.util.CustomerTM;
 

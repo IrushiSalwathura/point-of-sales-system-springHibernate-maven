@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.dep.AppInitializer;
 import lk.ijse.dep.business.BOFactory;
 import lk.ijse.dep.business.BOType;
 import lk.ijse.dep.business.custom.CustomerBO;
@@ -27,7 +28,6 @@ import java.util.Optional;
  * @author Irushi Salwathura
  */
 public class ManageCustomerFormController {
-    private static final CustomerBO customerBO = BOFactory.getInstance().getBO(BOType.CUSTOMER);
     public AnchorPane root;
     public TextField txtCustomerID;
     public TextField txtCustomerName;
@@ -37,7 +37,7 @@ public class ManageCustomerFormController {
     public Button btnDelete;
     public Button btnBack;
     public Button btnAddNewCustomer;
-
+    private CustomerBO customerBO = AppInitializer.getApplicationContext().getBean(CustomerBO.class);
     /**
      * Initializes the lk.ijse.dep.controller class.
      */

@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import lk.ijse.dep.AppInitializer;
 import lk.ijse.dep.business.BOFactory;
 import lk.ijse.dep.business.BOType;
 import lk.ijse.dep.business.custom.ItemBO;
@@ -26,7 +27,6 @@ import java.util.Optional;
  * @author Irushi Salwathura
  */
 public class ManageItemFormController {
-    private final ItemBO itemBO = BOFactory.getInstance().getBO(BOType.ITEM);
     public AnchorPane root;
     public Button btnBack;
     public Button btnAddNewItem;
@@ -37,6 +37,7 @@ public class ManageItemFormController {
     public TextField txtUnitPrice;
     public TextField txtQtyOnHand;
     public TableView<ItemTM> tblItems;
+    private ItemBO itemBO = AppInitializer.getApplicationContext().getBean(ItemBO.class);
 
     /**
      * Initializes the lk.ijse.dep.controller class.

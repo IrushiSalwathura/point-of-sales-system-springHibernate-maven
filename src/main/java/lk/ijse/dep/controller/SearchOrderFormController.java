@@ -1,5 +1,6 @@
 package lk.ijse.dep.controller;
 
+import lk.ijse.dep.AppInitializer;
 import lk.ijse.dep.business.BOFactory;
 import lk.ijse.dep.business.BOType;
 import lk.ijse.dep.business.custom.OrderBO;
@@ -42,7 +43,7 @@ public class SearchOrderFormController {
     public TableView<OrderTM> tblSearch;
     private ArrayList<OrderTM> searchOrdersArray = new ArrayList<>();
 
-    private final OrderBO orderBO = BOFactory.getInstance().getBO(BOType.ORDER);
+    private OrderBO orderBO = AppInitializer.getApplicationContext().getBean(OrderBO.class);
     /**
      * Initializes the lk.ijse.dep.controller class.
      */
